@@ -1,11 +1,25 @@
 //---------------------------------------------------
 // Helm Behavior file 
 
+//---------------------------------------------------
+// Initialization
+//---------------------------------------------------
 initialize   DEPLOY  = false
 initialize   RETURN  = false
 initialize   STATION_KEEP = true
-initialize   AVOID   = true
 initialize   WPT = true 
+
+#ifdef COLREGS_COMPLIANCE true
+  initialize   AVOID   = true
+#endif
+
+#ifdef COLREGS_COMPLIANCE true
+  initialize   AVOID   = true
+#endif
+
+//---------------------------------------------------
+// Modes
+//---------------------------------------------------
 
 set MODE = ACTIVE {
   DEPLOY = true
@@ -27,7 +41,10 @@ set MODE = TRANSITING {
 }
 
 
-//----------------------------------------------
+//---------------------------------------------------
+// Behaviors
+//---------------------------------------------------
+
 Behavior = BHV_Waypoint
 {
   // General Behavior Parameters
@@ -138,14 +155,14 @@ Behavior = BHV_AvdColregsV19
          extrapolate = true
                decay = 30,60
 
-    giveway_bow_dist = 10
+    giveway_bow_dist = 20
         use_refinery = true
 
-      pwt_outer_dist = 35
-      pwt_inner_dist = 10
-      completed_dist = 45
-   min_util_cpa_dist = 10
-   max_util_cpa_dist = 18
+      pwt_outer_dist = 70
+      pwt_inner_dist = 20
+      completed_dist = 90
+   min_util_cpa_dist = 20
+   max_util_cpa_dist = 36
            pwt_grade = linear
  bearing_line_config = white:0, green:0.65, yellow:0.8, red:1.0
 }

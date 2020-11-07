@@ -45,6 +45,8 @@ START_HEADING1="90"
 START_HEADING2="270"
 PTS1="{0,-70:200,-70}"
 PTS2="{200,-70:0,-70}"
+COLREGS_COMPLIANCE1="true"
+COLREGS_COMPLIANCE2="true"
 SHORE_LISTEN="9300"
 
 nsplug meta_vehicle.moos targ_ownship.moos -f WARP=$TIME_WARP \
@@ -63,10 +65,12 @@ nsplug meta_shoreside.moos targ_shoreside.moos -f WARP=$TIME_WARP \
     VNAME2=$VNAME2     LAUNCH_GUI=$LAUNCH_GUI
 
 nsplug meta_vehicle.bhv targ_ownship.bhv -f VNAME=$VNAME1     \
-    START_POS=$START_POS1     PTS=$PTS1
+    START_POS=$START_POS1     PTS=$PTS1                       \
+    COLREGS_COMPLIANCE=$COLREGS_COMPLIANCE1
   
 nsplug meta_vehicle.bhv targ_contact.bhv -f VNAME=$VNAME2     \
-    START_POS=$START_POS2     PTS=$PTS2
+    START_POS=$START_POS2     PTS=$PTS2                       \
+    COLREGS_COMPLIANCE=$COLREGS_COMPLIANCE2
     
 
 if [ ! -e targ_ownship.moos ]; then echo "no targ_ownship.moos"; exit; fi
