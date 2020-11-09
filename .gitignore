@@ -4,6 +4,9 @@ lib/
 build/
 
 # Ignore log files in mission directory
-missions/*/*.log
-missions/*/*.alog
-missions/*/*.blog
+missions/*/LOG_*
+missions/*/XLOG_*
+missions/*/.LastOpenedMOOSLogDirectory
+
+# Ignore target files created from metafiles 
+targ_*
