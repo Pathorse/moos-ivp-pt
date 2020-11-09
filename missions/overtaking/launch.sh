@@ -39,16 +39,16 @@ done
 #-------------------------------------------------------
 VNAME1="os"           # The first vehicle Community
 VNAME2="cn"           # The second vehicle Community
-START_POS1="0,-70"         
-START_POS2="200,-70"        
+START_POS1="-50,-70"         
+START_POS2="0,-70"        
 START_HEADING1="90"
-START_HEADING2="270"
-SPD1="0.2"
-SPD2="2.2"
-PTS1="{0,-70:200,-70}"
-PTS2="{200,-70:0,-70}"
+START_HEADING2="90"
+SPD1="1.2"
+SPD2="0.5"
+PTS1="{200,-70}"
+PTS2="{280,-70}"
 COLREGS_COMPLIANCE1="true"
-COLREGS_COMPLIANCE2="true"
+COLREGS_COMPLIANCE2="false"
 SHORE_LISTEN="9300"
 
 nsplug meta_vehicle.moos targ_os.moos -f WARP=$TIME_WARP \
