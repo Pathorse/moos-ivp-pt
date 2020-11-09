@@ -4,5 +4,6 @@ lib/
 build/
 
 # Ignore log files in mission directory
-missions/*.log
-missions/*.alog
+missions/*/*.log
+missions/*/*.alog
+missions/*/*.blog
