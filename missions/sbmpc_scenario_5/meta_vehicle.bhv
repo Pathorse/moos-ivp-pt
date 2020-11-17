@@ -53,6 +53,8 @@ Behavior = BHV_Waypoint
   pwt          = 100                   // default
   condition    = MODE==TRANSITING      // example
   updates      = TRANSIT_UPDATES       // example
+  endflag      = STATION_KEEP = true
+  endflag      = AVOID = false
 
   // Parameters specific to this behavior
   // ------------------------------------
@@ -155,7 +157,7 @@ Behavior = BHV_AvdColregsV19
          extrapolate = true
                decay = 30,60
 
-    giveway_bow_dist = 10
+    giveway_bow_dist = 5
         use_refinery = true
 
       pwt_outer_dist = 45
