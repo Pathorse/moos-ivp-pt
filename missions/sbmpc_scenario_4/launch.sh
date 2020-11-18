@@ -40,45 +40,21 @@ done
 VNAME1="os"           # The first vehicle Community
 VNAME2="cn_1"           # The second vehicle Community
 VNAME3="cn_2"           # The second vehicle Community
-VNAME4="cn_3"           # The second vehicle Community
-VNAME5="cn_4"           # The second vehicle Community
-VNAME6="cn_5"           # The second vehicle Community
-VNAME7="cn_6"           # The second vehicle Community
-START_POS1="-20,-165"     # -50, -190 
-START_POS2="190,-90"
-START_POS3="190,-75"
-START_POS4="210,-45"
-START_POS5="210,-30"
-START_POS6="210,-20"
-START_POS7="190,-80"
+START_POS1="0,-145"        # -50, -190 
+START_POS2="40,-105"
+START_POS3="180,-60"
 START_HEADING1="45"
-START_HEADING2="270"
+START_HEADING2="45"
 START_HEADING3="270"
-START_HEADING4="270"
-START_HEADING5="270"
-START_HEADING6="270"
-START_HEADING7="270"
-SPD1="0.4"
-SPD2="1.2"
+SPD1="1.2"
+SPD2="0.5"
 SPD3="1.2"
-SPD4="1.2"
-SPD5="1.4"
-SPD6="1.2"
-SPD7="1.2"
 PTS1="{175,30}"
-PTS2="{-25,-120}"
-PTS3="{-25,-90}"
-PTS4="{0,-40}"
-PTS5="{-20,-25}"
-PTS6="{0,-15}"
-PTS7="{-25,-95}"
+PTS2="{175,30}"
+PTS3="{-50,-60}"
 COLREGS_COMPLIANCE1="true"
-COLREGS_COMPLIANCE2="false"
+COLREGS_COMPLIANCE2="true"
 COLREGS_COMPLIANCE3="false"
-COLREGS_COMPLIANCE4="false"
-COLREGS_COMPLIANCE5="false"
-COLREGS_COMPLIANCE6="false"
-COLREGS_COMPLIANCE7="false"
 SHORE_LISTEN="9300"
 
 nsplug meta_vehicle.moos targ_$VNAME1.moos -f WARP=$TIME_WARP \
@@ -96,31 +72,10 @@ nsplug meta_vehicle.moos targ_$VNAME3.moos -f WARP=$TIME_WARP \
     VPORT="9003"           SHORE_LISTEN=$SHORE_LISTEN     \
     START_POS=$START_POS3  START_HEADING=$START_HEADING3
 
-nsplug meta_vehicle.moos targ_$VNAME4.moos -f WARP=$TIME_WARP \
-    VNAME=$VNAME4          SHARE_LISTEN="9304"            \
-    VPORT="9004"           SHORE_LISTEN=$SHORE_LISTEN     \
-    START_POS=$START_POS4  START_HEADING=$START_HEADING4
-
-nsplug meta_vehicle.moos targ_$VNAME5.moos -f WARP=$TIME_WARP \
-    VNAME=$VNAME5          SHARE_LISTEN="9308"            \
-    VPORT="9008"           SHORE_LISTEN=$SHORE_LISTEN     \
-    START_POS=$START_POS5  START_HEADING=$START_HEADING5
-
-nsplug meta_vehicle.moos targ_$VNAME6.moos -f WARP=$TIME_WARP \
-    VNAME=$VNAME6          SHARE_LISTEN="9306"            \
-    VPORT="9006"           SHORE_LISTEN=$SHORE_LISTEN     \
-    START_POS=$START_POS6  START_HEADING=$START_HEADING6
-
-nsplug meta_vehicle.moos targ_$VNAME7.moos -f WARP=$TIME_WARP \
-    VNAME=$VNAME7          SHARE_LISTEN="9307"            \
-    VPORT="9007"           SHORE_LISTEN=$SHORE_LISTEN     \
-    START_POS=$START_POS7  START_HEADING=$START_HEADING7
-
 nsplug meta_shoreside.moos targ_shoreside.moos -f WARP=$TIME_WARP \
     SNAME="shoreside"  SHARE_LISTEN=$SHORE_LISTEN                 \
     SPORT="9000"       VNAME1=$VNAME1                             \
-    VNAME2=$VNAME2     VNAME3=$VNAME3                             \
-    VNAME4=$VNAME4     LAUNCH_GUI=$LAUNCH_GUI
+    VNAME2=$VNAME2     LAUNCH_GUI=$LAUNCH_GUI
 
 nsplug meta_vehicle.bhv targ_$VNAME1.bhv -f VNAME=$VNAME1               \
     START_POS=$START_POS1                       PTS=$PTS1          \
@@ -133,22 +88,7 @@ nsplug meta_vehicle.bhv targ_$VNAME2.bhv -f VNAME=$VNAME2               \
 nsplug meta_vehicle.bhv targ_$VNAME3.bhv -f VNAME=$VNAME3               \
     START_POS=$START_POS3                       PTS=$PTS3          \
     COLREGS_COMPLIANCE=$COLREGS_COMPLIANCE3     TRANSIT_SPD=$SPD3
-
-nsplug meta_vehicle.bhv targ_$VNAME4.bhv -f VNAME=$VNAME4               \
-    START_POS=$START_POS4                       PTS=$PTS4          \
-    COLREGS_COMPLIANCE=$COLREGS_COMPLIANCE4     TRANSIT_SPD=$SPD4
-
-nsplug meta_vehicle.bhv targ_$VNAME5.bhv -f VNAME=$VNAME5               \
-    START_POS=$START_POS5                       PTS=$PTS5          \
-    COLREGS_COMPLIANCE=$COLREGS_COMPLIANCE5     TRANSIT_SPD=$SPD6
-
-nsplug meta_vehicle.bhv targ_$VNAME6.bhv -f VNAME=$VNAME6               \
-    START_POS=$START_POS6                       PTS=$PTS6          \
-    COLREGS_COMPLIANCE=$COLREGS_COMPLIANCE6     TRANSIT_SPD=$SPD6
-
-nsplug meta_vehicle.bhv targ_$VNAME7.bhv -f VNAME=$VNAME7               \
-    START_POS=$START_POS7                       PTS=$PTS7          \
-    COLREGS_COMPLIANCE=$COLREGS_COMPLIANCE7     TRANSIT_SPD=$SPD7
+    
 
 if [ ! -e targ_$VNAME1.moos ]; then echo "no targ_$VNAME1.moos"; exit; fi
 if [ ! -e targ_$VNAME1.bhv  ]; then echo "no targ_$VNAME1.bhv "; exit; fi
@@ -156,14 +96,6 @@ if [ ! -e targ_$VNAME2.moos ]; then echo "no targ_$VNAME2.moos"; exit; fi
 if [ ! -e targ_$VNAME2.bhv  ]; then echo "no targ_$VNAME2.bhv "; exit; fi
 if [ ! -e targ_$VNAME3.moos ]; then echo "no targ_$VNAME3.moos"; exit; fi
 if [ ! -e targ_$VNAME3.bhv  ]; then echo "no targ_$VNAME3.bhv "; exit; fi
-if [ ! -e targ_$VNAME4.moos ]; then echo "no targ_$VNAME4.moos"; exit; fi
-if [ ! -e targ_$VNAME4.bhv  ]; then echo "no targ_$VNAME4.bhv "; exit; fi
-if [ ! -e targ_$VNAME5.moos ]; then echo "no targ_$VNAME5.moos"; exit; fi
-if [ ! -e targ_$VNAME5.bhv  ]; then echo "no targ_$VNAME5.bhv "; exit; fi
-if [ ! -e targ_$VNAME6.moos ]; then echo "no targ_$VNAME6.moos"; exit; fi
-if [ ! -e targ_$VNAME6.bhv  ]; then echo "no targ_$VNAME6.bhv "; exit; fi
-if [ ! -e targ_$VNAME7.moos ]; then echo "no targ_$VNAME7.moos"; exit; fi
-if [ ! -e targ_$VNAME7.bhv  ]; then echo "no targ_$VNAME7.bhv "; exit; fi
 if [ ! -e targ_shoreside.moos ]; then echo "no targ_shoreside.moos";  exit; fi
 
 if [ ${JUST_MAKE} = "yes" ] ; then
@@ -182,14 +114,6 @@ echo "Launching $VNAME2 MOOS Community with WARP:" $TIME_WARP
 pAntler targ_$VNAME2.moos >& /dev/null &
 echo "Launching $VNAME3 MOOS Community with WARP:" $TIME_WARP
 pAntler targ_$VNAME3.moos >& /dev/null &
-echo "Launching $VNAME4 MOOS Community with WARP:" $TIME_WARP
-pAntler targ_$VNAME4.moos >& /dev/null &
-echo "Launching $VNAME5 MOOS Community with WARP:" $TIME_WARP
-pAntler targ_$VNAME5.moos >& /dev/null &
-echo "Launching $VNAME6 MOOS Community with WARP:" $TIME_WARP
-pAntler targ_$VNAME6.moos >& /dev/null &
-echo "Launching $VNAME7 MOOS Community with WARP:" $TIME_WARP
-pAntler targ_$VNAME7.moos >& /dev/null &
 echo "Done "
 
 uMAC targ_shoreside.moos
