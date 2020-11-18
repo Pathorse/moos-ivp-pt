@@ -60,7 +60,7 @@ Behavior = BHV_Waypoint
   // ------------------------------------
      capture_radius = 3                       // default
        capture_line = false                   // default
-               lead = 40
+               lead = 50
       lead_to_start = true                   // default
               order = normal                  // default 
              points = pts=$(PTS)
