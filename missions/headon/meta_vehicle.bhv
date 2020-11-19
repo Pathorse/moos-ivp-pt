@@ -53,6 +53,8 @@ Behavior = BHV_Waypoint
   pwt          = 100                   // default
   condition    = MODE==TRANSITING      // example
   updates      = TRANSIT_UPDATES       // example
+  endflag      = STATION_KEEP = true
+  endflag      = AVOID = false
 
   // Parameters specific to this behavior
   // ------------------------------------
@@ -63,7 +65,7 @@ Behavior = BHV_Waypoint
               order = normal                  // default 
              points = pts=$(PTS)
         post_suffix = $(VNAME)                   // example
-             repeat = forever
+             //repeat = forever
         slip_radius = 10                      // default
               speed = $(TRANSIT_SPD)
 

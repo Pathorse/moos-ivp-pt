@@ -48,7 +48,7 @@ SPD2="1.2"
 PTS1="{150,-50}"
 PTS2="{50,-150}"
 COLREGS_COMPLIANCE1="true"
-COLREGS_COMPLIANCE2="true"
+COLREGS_COMPLIANCE2="false"
 SHORE_LISTEN="9300"
 
 nsplug meta_vehicle.moos targ_os.moos -f WARP=$TIME_WARP \

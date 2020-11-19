@@ -60,7 +60,7 @@ Behavior = BHV_Waypoint
   // ------------------------------------
      capture_radius = 3                       // default
        capture_line = false                   // default
-               lead = 40
+               lead = 50
       lead_to_start = true                   // default
               order = normal                  // default 
              points = pts=$(PTS)
@@ -157,7 +157,7 @@ Behavior = BHV_AvdColregsV19
          extrapolate = true
                decay = 30,60
 
-    giveway_bow_dist = 5
+    giveway_bow_dist = 10
         use_refinery = true
 
       pwt_outer_dist = 45
