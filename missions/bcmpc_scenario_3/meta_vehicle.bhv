@@ -60,7 +60,7 @@ Behavior = BHV_Waypoint
   // ------------------------------------
      capture_radius = 3                       // default
        capture_line = false                   // default
-               lead = 50
+               lead = 75
       lead_to_start = true                   // default
               order = normal                  // default 
              points = pts=$(PTS)
@@ -163,13 +163,13 @@ Behavior = BHV_AvdColregsV19
   //    pwt_outer_dist = 45    //35
   //    pwt_inner_dist = 10     //10
   //    completed_dist = 45     //45
-  // min_util_cpa_dist = 10      //10
-  // max_util_cpa_dist = 18     //18
-      pwt_outer_dist = 45//65
-      pwt_inner_dist = 10//15
-      completed_dist = 45
+  // min_util_cpa_dist = 20      //10
+  // max_util_cpa_dist = 36     //18
+      pwt_outer_dist = 90//65
+      pwt_inner_dist = 20//15
+      completed_dist = 90
    min_util_cpa_dist = 20
-   max_util_cpa_dist = 36
+   max_util_cpa_dist = 54
            pwt_grade = linear
  bearing_line_config = white:0, green:0.65, yellow:0.8, red:1.0
 }

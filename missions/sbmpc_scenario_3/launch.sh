@@ -103,17 +103,17 @@ nsplug meta_vehicle.moos targ_$VNAME4.moos -f WARP=$TIME_WARP \
 
 nsplug meta_vehicle.moos targ_$VNAME5.moos -f WARP=$TIME_WARP \
     VNAME=$VNAME5          SHARE_LISTEN="9308"            \
-    VPORT="9008"           SHORE_LISTEN=$SHORE_LISTEN     \
+    VPORT="9038"           SHORE_LISTEN=$SHORE_LISTEN     \
     START_POS=$START_POS5  START_HEADING=$START_HEADING5
 
 nsplug meta_vehicle.moos targ_$VNAME6.moos -f WARP=$TIME_WARP \
     VNAME=$VNAME6          SHARE_LISTEN="9306"            \
-    VPORT="9006"           SHORE_LISTEN=$SHORE_LISTEN     \
+    VPORT="9036"           SHORE_LISTEN=$SHORE_LISTEN     \
     START_POS=$START_POS6  START_HEADING=$START_HEADING6
 
 nsplug meta_vehicle.moos targ_$VNAME7.moos -f WARP=$TIME_WARP \
     VNAME=$VNAME7          SHARE_LISTEN="9307"            \
-    VPORT="9007"           SHORE_LISTEN=$SHORE_LISTEN     \
+    VPORT="9037"           SHORE_LISTEN=$SHORE_LISTEN     \
     START_POS=$START_POS7  START_HEADING=$START_HEADING7
 
 nsplug meta_shoreside.moos targ_shoreside.moos -f WARP=$TIME_WARP \

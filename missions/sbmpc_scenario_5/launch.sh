@@ -43,8 +43,8 @@ VNAME3="cn_2"           # The second vehicle Community
 VNAME4="cn_3"           # The second vehicle Community
 VNAME5="cn_4"           # The second vehicle Community
 VNAME6="cn_5"           # The second vehicle Community
-START_POS1="0,-145"        # -50, -190 
-START_POS2="40,-105"
+START_POS1="-45,-190"        # -50, -190 
+START_POS2="10,-125"
 START_POS3="-3,-27"
 START_POS4="40,-15"
 START_POS5="70,-155"
@@ -55,14 +55,14 @@ START_HEADING3="135"
 START_HEADING4="135"
 START_HEADING5="335"
 START_HEADING6="335"
-SPD1="1.2"
+SPD1="1.4"
 SPD2="0.5"
-SPD3="1.0"
-SPD4="1.0"
-SPD5="1.0"
-SPD6="1.0"
+SPD3="0.8"
+SPD4="0.5"
+SPD5="0.8"
+SPD6="0.8"
 PTS1="{175,30}"
-PTS2="{175,30}"
+PTS2="{185,30}"
 PTS3="{30,-155}"
 PTS4="{120,-120}"
 PTS5="{20,-25}"
@@ -81,7 +81,7 @@ nsplug meta_vehicle.moos targ_$VNAME1.moos -f WARP=$TIME_WARP \
     START_POS=$START_POS1  START_HEADING=$START_HEADING1
 
 nsplug meta_vehicle.moos targ_$VNAME2.moos -f WARP=$TIME_WARP \
-    VNAME=$VNAME2          SHARE_LISTEN="9302"            \
+    VNAME=$VNAME2          SHARE_LISTEN="9306"            \
     VPORT="9002"           SHORE_LISTEN=$SHORE_LISTEN     \
     START_POS=$START_POS2  START_HEADING=$START_HEADING2
 
@@ -96,13 +96,13 @@ nsplug meta_vehicle.moos targ_$VNAME4.moos -f WARP=$TIME_WARP \
     START_POS=$START_POS4  START_HEADING=$START_HEADING4
 
 nsplug meta_vehicle.moos targ_$VNAME5.moos -f WARP=$TIME_WARP \
-    VNAME=$VNAME5          SHARE_LISTEN="9307"            \
-    VPORT="9007"           SHORE_LISTEN=$SHORE_LISTEN     \
+    VNAME=$VNAME5          SHARE_LISTEN="9335"            \
+    VPORT="9035"           SHORE_LISTEN=$SHORE_LISTEN     \
     START_POS=$START_POS5  START_HEADING=$START_HEADING5
 
 nsplug meta_vehicle.moos targ_$VNAME6.moos -f WARP=$TIME_WARP \
-    VNAME=$VNAME6          SHARE_LISTEN="9306"            \
-    VPORT="9006"           SHORE_LISTEN=$SHORE_LISTEN     \
+    VNAME=$VNAME6          SHARE_LISTEN="9336"            \
+    VPORT="9036"           SHORE_LISTEN=$SHORE_LISTEN     \
     START_POS=$START_POS6  START_HEADING=$START_HEADING6
 
 nsplug meta_shoreside.moos targ_shoreside.moos -f WARP=$TIME_WARP \

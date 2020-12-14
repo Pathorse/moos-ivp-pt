@@ -39,11 +39,11 @@ done
 #-------------------------------------------------------
 VNAME1="os"           # The first vehicle Community
 VNAME2="cn"           # The second vehicle Community
-START_POS1="0,-145"        # -50, -190 
-START_POS2="40,-105"
+START_POS1="-90,-235"        # -50, -190 
+START_POS2="-30,-175"
 START_HEADING1="45"
 START_HEADING2="45"
-SPD1="1.2"
+SPD1="1.4"
 SPD2="0.5"
 PTS1="{175,30}"
 PTS2="{175,30}"

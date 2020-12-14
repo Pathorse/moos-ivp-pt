@@ -53,12 +53,14 @@ Behavior = BHV_Waypoint
   pwt          = 100                   // default
   condition    = MODE==TRANSITING      // example
   updates      = TRANSIT_UPDATES       // example
+  endflag      = STATION_KEEP = true
+  endflag      = AVOID = false
 
   // Parameters specific to this behavior
   // ------------------------------------
      capture_radius = 3                       // default
        capture_line = false                   // default
-               lead = 40
+               lead = 75
       lead_to_start = true                   // default
               order = normal                  // default 
              points = pts=$(PTS)
@@ -158,11 +160,11 @@ Behavior = BHV_AvdColregsV19
     giveway_bow_dist = 10
         use_refinery = true
 
-      pwt_outer_dist = 45
-      pwt_inner_dist = 10
-      completed_dist = 45
-   min_util_cpa_dist = 10
-   max_util_cpa_dist = 18
+      pwt_outer_dist = 90
+      pwt_inner_dist = 20
+      completed_dist = 90
+   min_util_cpa_dist = 20
+   max_util_cpa_dist = 54
            pwt_grade = linear
  bearing_line_config = white:0, green:0.65, yellow:0.8, red:1.0
 }
